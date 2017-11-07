@@ -1,6 +1,6 @@
 let static = require('node-static');
  
-let file = new static.Server('./html');
+let file = new static.Server('html');
  
 require('http')
   .createServer((request, response) => {
@@ -10,4 +10,4 @@ require('http')
         //
         file.serve(request, response);
     }).resume();
-}).listen(8080);
+}).listen(5000);
